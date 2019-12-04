@@ -1,0 +1,15 @@
+D:\workspace\SimpleGAS\Intermediate\Build\Win64\UE4Editor\Development\SimpleGAS\Definitions.SimpleGAS.h
+D:\workspace\SimpleGAS\Source\SimpleGAS\SimpleGASGameMode.h
+D:\Games\Fortnite\UE_4.23\Engine\Source\Runtime\Engine\Classes\GameFramework/GameModeBase.h
+D:\Games\Fortnite\UE_4.23\Engine\Source\Runtime\Engine\Classes\Engine/ServerStatReplicator.h
+D:\Games\Fortnite\UE_4.23\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ServerStatReplicator.generated.h
+D:\Games\Fortnite\UE_4.23\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameModeBase.generated.h
+D:\workspace\SimpleGAS\Intermediate\Build\Win64\UE4Editor\Inc\SimpleGAS\SimpleGASGameMode.generated.h
+D:\workspace\SimpleGAS\Source\SimpleGAS\SimpleGASCharacter.h
+D:\Games\Fortnite\UE_4.23\Engine\Plugins\Runtime\GameplayAbilities\Source\GameplayAbilities\Public\AbilitySystemInterface.h
+D:\Games\Fortnite\UE_4.23\Engine\Plugins\Runtime\GameplayAbilities\Intermediate\Build\Win64\UE4Editor\Inc\GameplayAbilities\AbilitySystemInterface.generated.h
+D:\Games\Fortnite\UE_4.23\Engine\Source\Runtime\Engine\Classes\GameFramework/Character.h
+D:\Games\Fortnite\UE_4.23\Engine\Source\Runtime\Engine\Classes\GameFramework/RootMotionSource.h
+D:\Games\Fortnite\UE_4.23\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\RootMotionSource.generated.h
+D:\Games\Fortnite\UE_4.23\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Character.generated.h
+D:\workspace\SimpleGAS\Intermediate\Build\Win64\UE4Editor\Inc\SimpleGAS\SimpleGASCharacter.generated.h

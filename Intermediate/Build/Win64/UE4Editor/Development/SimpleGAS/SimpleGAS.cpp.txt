@@ -1,0 +1,2 @@
+D:\workspace\SimpleGAS\Intermediate\Build\Win64\UE4Editor\Development\SimpleGAS\Definitions.SimpleGAS.h
+D:\workspace\SimpleGAS\Source\SimpleGAS\SimpleGAS.h

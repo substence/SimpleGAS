@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\SimpleGAS.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{D6C4624C-E2B0-45D9-9977-13DFA4FB2BB5}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\SimpleGAS.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\SimpleGASEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{00F03B00-7902-4DA1-96EB-9420ACAE7CC0}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\SimpleGAS">
+      <UniqueIdentifier>{39CF69DF-E94B-41F2-986B-6865DC51305B}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\SimpleGAS\SimpleGAS.Build.cs">
+      <Filter>Source\SimpleGAS</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\SimpleGAS\SimpleGAS.cpp">
+      <Filter>Source\SimpleGAS</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SimpleGAS\SimpleGAS.h">
+      <Filter>Source\SimpleGAS</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\SimpleGAS\SimpleGASCharacter.cpp">
+      <Filter>Source\SimpleGAS</Filter>
+    </ClCompile>
+    <None Include="..\..\Source\SimpleGAS\SimpleGASCharacter.cpp___jb_old___">
+      <Filter>Source\SimpleGAS</Filter>
+    </None>
+    <None Include="..\..\Source\SimpleGAS\SimpleGASCharacter.cpp___jb_tmp___">
+      <Filter>Source\SimpleGAS</Filter>
+    </None>
+    <ClInclude Include="..\..\Source\SimpleGAS\SimpleGASCharacter.h">
+      <Filter>Source\SimpleGAS</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\SimpleGAS\SimpleGASGameMode.cpp">
+      <Filter>Source\SimpleGAS</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SimpleGAS\SimpleGASGameMode.h">
+      <Filter>Source\SimpleGAS</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
