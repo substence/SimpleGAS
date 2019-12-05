@@ -75,3 +75,6 @@ Plugins/*/Intermediate/*
 
 # Cache files for the editor to use
 DerivedDataCache/*
+
+Content/SuperGrid/SuperGrid/TutorialLevel/StarterTutorial_BuiltData.uasset
+Content/StarterContent/HDRI/HDRI_Epic_Courtyard_Daylight.uasset
