@@ -6,7 +6,10 @@ AWarlockPlayerState::AWarlockPlayerState()
 {
 	AbilitySystemComponent = CreateDefaultSubobject<UAbilitySystemComponent>(TEXT("AbilitySystemComponent"));
 	AbilitySystemComponent->SetIsReplicated(true);
-	//AbilitySystemComponent->
+
+	AttributeSet = CreateDefaultSubobject<UWarlockAttributeSet>(TEXT("AttributeSet"));
+
+	NetUpdateFrequency = 100.0f;
 }
 
 UAbilitySystemComponent* AWarlockPlayerState::GetAbilitySystemComponent() const

@@ -6,6 +6,7 @@
 #include "GameFramework/PlayerState.h"
 #include "AbilitySystemInterface.h"
 #include "AbilitySystemComponent.h"
+#include "WarlockAttributeSet.h"
 #include "WarlockPlayerState.generated.h"
 
 /**
@@ -23,4 +24,7 @@ public:
 
 	UPROPERTY(BlueprintReadOnly, Category="Ability System")
 	class UAbilitySystemComponent* AbilitySystemComponent;
+
+	UPROPERTY(BlueprintReadOnly, Category = "Attribute Set")
+	class UWarlockAttributeSet* AttributeSet;
 };

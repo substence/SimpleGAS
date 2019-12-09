@@ -18,6 +18,7 @@ void EmptyLinkFunctionForGeneratedCodeSimpleGASCharacter() {}
 	SIMPLEGAS_API UClass* Z_Construct_UClass_ASimpleGASCharacter_NoRegister();
 	SIMPLEGAS_API UClass* Z_Construct_UClass_ASimpleGASCharacter();
 	ENGINE_API UClass* Z_Construct_UClass_ACharacter();
+	SIMPLEGAS_API UClass* Z_Construct_UClass_UWarlockAttributeSet_NoRegister();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 	GAMEPLAYABILITIES_API UClass* Z_Construct_UClass_UGameplayAbility_NoRegister();
 	GAMEPLAYABILITIES_API UClass* Z_Construct_UClass_UAbilitySystemComponent_NoRegister();
@@ -100,18 +101,14 @@ void EmptyLinkFunctionForGeneratedCodeSimpleGASCharacter() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AttributeSet_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_AttributeSet;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Abilities_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FArrayPropertyParams NewProp_Abilities;
 		static const UE4CodeGen_Private::FClassPropertyParams NewProp_Abilities_Inner;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_BaseLookUpRate_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_BaseLookUpRate;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_BaseTurnRate_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_BaseTurnRate;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AbilitySystem_MetaData[];
 #endif
@@ -141,6 +138,14 @@ void EmptyLinkFunctionForGeneratedCodeSimpleGASCharacter() {}
 	};
 #endif
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASimpleGASCharacter_Statics::NewProp_AttributeSet_MetaData[] = {
+		{ "Category", "Attribute Set" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "SimpleGASCharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASimpleGASCharacter_Statics::NewProp_AttributeSet = { "AttributeSet", nullptr, (EPropertyFlags)0x001000000008001c, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ASimpleGASCharacter, AttributeSet), Z_Construct_UClass_UWarlockAttributeSet_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ASimpleGASCharacter_Statics::NewProp_AttributeSet_MetaData, ARRAY_COUNT(Z_Construct_UClass_ASimpleGASCharacter_Statics::NewProp_AttributeSet_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASimpleGASCharacter_Statics::NewProp_Abilities_MetaData[] = {
 		{ "Category", "Abilities" },
 		{ "ModuleRelativePath", "SimpleGASCharacter.h" },
@@ -148,24 +153,6 @@ void EmptyLinkFunctionForGeneratedCodeSimpleGASCharacter() {}
 #endif
 	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UClass_ASimpleGASCharacter_Statics::NewProp_Abilities = { "Abilities", nullptr, (EPropertyFlags)0x0014000000000005, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ASimpleGASCharacter, Abilities), METADATA_PARAMS(Z_Construct_UClass_ASimpleGASCharacter_Statics::NewProp_Abilities_MetaData, ARRAY_COUNT(Z_Construct_UClass_ASimpleGASCharacter_Statics::NewProp_Abilities_MetaData)) };
 	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_ASimpleGASCharacter_Statics::NewProp_Abilities_Inner = { "Abilities", nullptr, (EPropertyFlags)0x0004000000000000, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UClass_UGameplayAbility_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(nullptr, 0) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASimpleGASCharacter_Statics::NewProp_BaseLookUpRate_MetaData[] = {
-		{ "Category", "Camera" },
-		{ "Comment", "/** Base look up/down rate, in deg/sec. Other scaling may affect final rate. */" },
-		{ "ModuleRelativePath", "SimpleGASCharacter.h" },
-		{ "ToolTip", "Base look up/down rate, in deg/sec. Other scaling may affect final rate." },
-	};
-#endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ASimpleGASCharacter_Statics::NewProp_BaseLookUpRate = { "BaseLookUpRate", nullptr, (EPropertyFlags)0x0010000000020015, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ASimpleGASCharacter, BaseLookUpRate), METADATA_PARAMS(Z_Construct_UClass_ASimpleGASCharacter_Statics::NewProp_BaseLookUpRate_MetaData, ARRAY_COUNT(Z_Construct_UClass_ASimpleGASCharacter_Statics::NewProp_BaseLookUpRate_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASimpleGASCharacter_Statics::NewProp_BaseTurnRate_MetaData[] = {
-		{ "Category", "Camera" },
-		{ "Comment", "/** Base turn rate, in deg/sec. Other scaling may affect final turn rate. */" },
-		{ "ModuleRelativePath", "SimpleGASCharacter.h" },
-		{ "ToolTip", "Base turn rate, in deg/sec. Other scaling may affect final turn rate." },
-	};
-#endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ASimpleGASCharacter_Statics::NewProp_BaseTurnRate = { "BaseTurnRate", nullptr, (EPropertyFlags)0x0010000000020015, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ASimpleGASCharacter, BaseTurnRate), METADATA_PARAMS(Z_Construct_UClass_ASimpleGASCharacter_Statics::NewProp_BaseTurnRate_MetaData, ARRAY_COUNT(Z_Construct_UClass_ASimpleGASCharacter_Statics::NewProp_BaseTurnRate_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASimpleGASCharacter_Statics::NewProp_AbilitySystem_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
@@ -198,10 +185,9 @@ void EmptyLinkFunctionForGeneratedCodeSimpleGASCharacter() {}
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASimpleGASCharacter_Statics::NewProp_CameraBoom = { "CameraBoom", nullptr, (EPropertyFlags)0x00400000000a001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ASimpleGASCharacter, CameraBoom), Z_Construct_UClass_USpringArmComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ASimpleGASCharacter_Statics::NewProp_CameraBoom_MetaData, ARRAY_COUNT(Z_Construct_UClass_ASimpleGASCharacter_Statics::NewProp_CameraBoom_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ASimpleGASCharacter_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASimpleGASCharacter_Statics::NewProp_AttributeSet,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASimpleGASCharacter_Statics::NewProp_Abilities,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASimpleGASCharacter_Statics::NewProp_Abilities_Inner,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASimpleGASCharacter_Statics::NewProp_BaseLookUpRate,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASimpleGASCharacter_Statics::NewProp_BaseTurnRate,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASimpleGASCharacter_Statics::NewProp_AbilitySystem,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASimpleGASCharacter_Statics::NewProp_FollowCamera,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASimpleGASCharacter_Statics::NewProp_CameraBoom,
@@ -236,7 +222,7 @@ void EmptyLinkFunctionForGeneratedCodeSimpleGASCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ASimpleGASCharacter, 1751495592);
+	IMPLEMENT_CLASS(ASimpleGASCharacter, 4221865513);
 	template<> SIMPLEGAS_API UClass* StaticClass<ASimpleGASCharacter>()
 	{
 		return ASimpleGASCharacter::StaticClass();
