@@ -60,4 +60,14 @@
       <Filter>Source\SimpleGAS</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Source\SimpleGAS\WarlockPlayerState.h">
+      <Filter>Source\SimpleGAS</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\SimpleGAS\WarlockPlayerState.cpp">
+      <Filter>Source\SimpleGAS</Filter>
+    </ClCompile>
+  </ItemGroup>
 </Project>
