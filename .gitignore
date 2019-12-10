@@ -78,3 +78,4 @@ DerivedDataCache/*
 
 Content/SuperGrid/SuperGrid/TutorialLevel/StarterTutorial_BuiltData.uasset
 Content/StarterContent/HDRI/HDRI_Epic_Courtyard_Daylight.uasset
+Intermediate/Build/Win64/SimpleGASEditor/Development/Engine/SharedPCH.Engine.h.pch
