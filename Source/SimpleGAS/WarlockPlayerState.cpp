@@ -6,8 +6,9 @@ AWarlockPlayerState::AWarlockPlayerState()
 {
 	AbilitySystemComponent = CreateDefaultSubobject<UAbilitySystemComponent>(TEXT("AbilitySystemComponent"));
 	AbilitySystemComponent->SetIsReplicated(true);
+	AbilitySystemComponent->SetReplicationMode(EGameplayEffectReplicationMode::Mixed);
 
-	AttributeSet = CreateDefaultSubobject<UWarlockAttributeSet>(TEXT("AttributeSet"));
+	AttributeSet = CreateDefaultSubobject<UWarlockAttributeSet>(TEXT("AttributeSetBase"));
 
 	NetUpdateFrequency = 100.0f;
 }

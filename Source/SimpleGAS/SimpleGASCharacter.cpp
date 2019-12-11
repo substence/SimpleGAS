@@ -42,7 +42,7 @@ ASimpleGASCharacter::ASimpleGASCharacter()
 	FollowCamera->SetupAttachment(CameraBoom, USpringArmComponent::SocketName); // Attach the camera to the end of the boom and let the boom adjust to match the controller orientation
 	FollowCamera->bUsePawnControlRotation = false; // Camera does not rotate relative to arm
 
-	AbilitySystem = CreateDefaultSubobject<UAbilitySystemComponent>(TEXT("AbilitySystem"));
+	//AbilitySystem = CreateDefaultSubobject<UAbilitySystemComponent>(TEXT("AbilitySystem"));
 	//AttributeSet = CreateDefaultSubobject<UWarlockAttributeSet>(TEXT("AttributeSet"));
 
 	bAlwaysRelevant = true;
@@ -117,7 +117,9 @@ void ASimpleGASCharacter::SetupAbilitySystemAndAttributes()
 		// Set the ASC on the Server. Clients do this in OnRep_PlayerState()
 		AbilitySystem = Cast<UAbilitySystemComponent>(PS->GetAbilitySystemComponent());
 
-		AttributeSet = PS->AttributeSet;
+		//AttributeSet = PS->AttributeSet;
+		//AbilitySystem->SpawnedAttributes.AddUnique(PS->AttributeSet);
+		//AbilitySystem->ForceReplication();
 
 		// AI won't have PlayerControllers so we can init again here just to be sure. No harm in initing twice for heroes that have PlayerControllers.
 		AbilitySystem->InitAbilityActorInfo(PS, this);
