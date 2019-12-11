@@ -13,9 +13,9 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define SIMPLEGAS_SimpleGASCharacter_generated_h
 
-#define SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_21_RPC_WRAPPERS
-#define SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_21_RPC_WRAPPERS_NO_PURE_DECLS
-#define SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_21_INCLASS_NO_PURE_DECLS \
+#define SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_23_RPC_WRAPPERS
+#define SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_23_RPC_WRAPPERS_NO_PURE_DECLS
+#define SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_23_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesASimpleGASCharacter(); \
 	friend struct Z_Construct_UClass_ASimpleGASCharacter_Statics; \
@@ -25,7 +25,7 @@ public: \
 	virtual UObject* _getUObject() const override { return const_cast<ASimpleGASCharacter*>(this); }
 
 
-#define SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_21_INCLASS \
+#define SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_23_INCLASS \
 private: \
 	static void StaticRegisterNativesASimpleGASCharacter(); \
 	friend struct Z_Construct_UClass_ASimpleGASCharacter_Statics; \
@@ -35,7 +35,7 @@ public: \
 	virtual UObject* _getUObject() const override { return const_cast<ASimpleGASCharacter*>(this); }
 
 
-#define SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_21_STANDARD_CONSTRUCTORS \
+#define SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_23_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API ASimpleGASCharacter(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ASimpleGASCharacter) \
@@ -48,7 +48,7 @@ private: \
 public:
 
 
-#define SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_21_ENHANCED_CONSTRUCTORS \
+#define SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_23_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API ASimpleGASCharacter(ASimpleGASCharacter&&); \
@@ -59,31 +59,31 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ASimpleGASCharacter); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ASimpleGASCharacter)
 
 
-#define SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_21_PRIVATE_PROPERTY_OFFSET \
+#define SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_23_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__CameraBoom() { return STRUCT_OFFSET(ASimpleGASCharacter, CameraBoom); } \
 	FORCEINLINE static uint32 __PPO__FollowCamera() { return STRUCT_OFFSET(ASimpleGASCharacter, FollowCamera); } \
 	FORCEINLINE static uint32 __PPO__AbilitySystem() { return STRUCT_OFFSET(ASimpleGASCharacter, AbilitySystem); }
 
 
-#define SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_18_PROLOG
-#define SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_21_GENERATED_BODY_LEGACY \
+#define SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_20_PROLOG
+#define SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_23_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_21_PRIVATE_PROPERTY_OFFSET \
-	SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_21_RPC_WRAPPERS \
-	SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_21_INCLASS \
-	SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_21_STANDARD_CONSTRUCTORS \
+	SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_23_PRIVATE_PROPERTY_OFFSET \
+	SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_23_RPC_WRAPPERS \
+	SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_23_INCLASS \
+	SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_23_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_21_GENERATED_BODY \
+#define SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_23_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_21_PRIVATE_PROPERTY_OFFSET \
-	SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_21_RPC_WRAPPERS_NO_PURE_DECLS \
-	SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_21_INCLASS_NO_PURE_DECLS \
-	SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_21_ENHANCED_CONSTRUCTORS \
+	SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_23_PRIVATE_PROPERTY_OFFSET \
+	SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_23_RPC_WRAPPERS_NO_PURE_DECLS \
+	SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_23_INCLASS_NO_PURE_DECLS \
+	SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_23_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -95,9 +95,9 @@ template<> SIMPLEGAS_API UClass* StaticClass<class ASimpleGASCharacter>();
 
 
 #define FOREACH_ENUM_ABILITYINPUT(op) \
-	op(AbilityInput::Fire) \
-	op(AbilityInput::Jump) \
-	op(AbilityInput::Slide) \
+	op(AbilityInput::Attack) \
+	op(AbilityInput::Movement) \
+	op(AbilityInput::Defense) \
 	op(AbilityInput::UseAbility1) 
 
 enum class AbilityInput : uint8;

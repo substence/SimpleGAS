@@ -67,12 +67,18 @@
     <ClInclude Include="..\..\Source\SimpleGAS\WarlockAttributeSet.h">
       <Filter>Source\SimpleGAS</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\SimpleGAS\AsyncTaskAttributeChanged.h">
+      <Filter>Source\SimpleGAS</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Source\SimpleGAS\WarlockPlayerState.cpp">
       <Filter>Source\SimpleGAS</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\SimpleGAS\WarlockAttributeSet.cpp">
+      <Filter>Source\SimpleGAS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SimpleGAS\AsyncTaskAttributeChanged.cpp">
       <Filter>Source\SimpleGAS</Filter>
     </ClCompile>
   </ItemGroup>

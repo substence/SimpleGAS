@@ -27,4 +27,6 @@ public:
 
 	UPROPERTY(BlueprintReadOnly, Category = "Attribute Set")
 	class UWarlockAttributeSet* AttributeSet;
+
+	bool bHasDefaultAbilities = false;
 };

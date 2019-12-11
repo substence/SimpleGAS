@@ -33,11 +33,13 @@
 /NODEFAULTLIB:"LIBCPD"
 /FUNCTIONPADMIN
 "D:\workspace\SimpleGAS\Intermediate\Build\Win64\SimpleGASEditor\Development\Engine\SharedPCH.Engine.h.obj"
+"D:\workspace\SimpleGAS\Intermediate\Build\Win64\UE4Editor\Development\SimpleGAS\AsyncTaskAttributeChanged.cpp.obj"
 "D:\workspace\SimpleGAS\Intermediate\Build\Win64\UE4Editor\Development\SimpleGAS\SimpleGAS.cpp.obj"
 "D:\workspace\SimpleGAS\Intermediate\Build\Win64\UE4Editor\Development\SimpleGAS\SimpleGASCharacter.cpp.obj"
 "D:\workspace\SimpleGAS\Intermediate\Build\Win64\UE4Editor\Development\SimpleGAS\SimpleGASGameMode.cpp.obj"
 "D:\workspace\SimpleGAS\Intermediate\Build\Win64\UE4Editor\Development\SimpleGAS\WarlockAttributeSet.cpp.obj"
 "D:\workspace\SimpleGAS\Intermediate\Build\Win64\UE4Editor\Development\SimpleGAS\WarlockPlayerState.cpp.obj"
+"D:\workspace\SimpleGAS\Intermediate\Build\Win64\UE4Editor\Development\SimpleGAS\AsyncTaskAttributeChanged.gen.cpp.obj"
 "D:\workspace\SimpleGAS\Intermediate\Build\Win64\UE4Editor\Development\SimpleGAS\SimpleGAS.init.gen.cpp.obj"
 "D:\workspace\SimpleGAS\Intermediate\Build\Win64\UE4Editor\Development\SimpleGAS\SimpleGASCharacter.gen.cpp.obj"
 "D:\workspace\SimpleGAS\Intermediate\Build\Win64\UE4Editor\Development\SimpleGAS\SimpleGASGameMode.gen.cpp.obj"

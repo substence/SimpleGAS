@@ -11,18 +11,22 @@
 #endif
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeSimpleGAS_init() {}
+	SIMPLEGAS_API UFunction* Z_Construct_UDelegateFunction_SimpleGAS_OnAttributeChanged__DelegateSignature();
 	UPackage* Z_Construct_UPackage__Script_SimpleGAS()
 	{
 		static UPackage* ReturnPackage = nullptr;
 		if (!ReturnPackage)
 		{
+			static UObject* (*const SingletonFuncArray[])() = {
+				(UObject* (*)())Z_Construct_UDelegateFunction_SimpleGAS_OnAttributeChanged__DelegateSignature,
+			};
 			static const UE4CodeGen_Private::FPackageParams PackageParams = {
 				"/Script/SimpleGAS",
-				nullptr,
-				0,
+				SingletonFuncArray,
+				ARRAY_COUNT(SingletonFuncArray),
 				PKG_CompiledIn | 0x00000000,
-				0x4D966F1F,
-				0xC651895D,
+				0x697143E9,
+				0x3D7444E7,
 				METADATA_PARAMS(nullptr, 0)
 			};
 			UE4CodeGen_Private::ConstructUPackage(ReturnPackage, PackageParams);

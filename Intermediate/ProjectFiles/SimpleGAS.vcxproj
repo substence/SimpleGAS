@@ -364,8 +364,10 @@
     <NMakeOutput>..\..\Binaries\HTML5\SimpleGAS-HTML5-Shipping.js</NMakeOutput>
   </PropertyGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Source\SimpleGAS\AsyncTaskAttributeChanged.cpp" />
     <ClCompile Include="..\..\Source\SimpleGAS\WarlockAttributeSet.cpp" />
     <ClCompile Include="..\..\Source\SimpleGAS\WarlockPlayerState.cpp" />
+    <ClInclude Include="..\..\Source\SimpleGAS\AsyncTaskAttributeChanged.h" />
     <ClInclude Include="..\..\Source\SimpleGAS\WarlockAttributeSet.h" />
     <ClInclude Include="..\..\Source\SimpleGAS\WarlockPlayerState.h" />
     <None Include="..\..\SimpleGAS.uproject" />

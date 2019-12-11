@@ -43,6 +43,7 @@ ASimpleGASCharacter::ASimpleGASCharacter()
 	FollowCamera->bUsePawnControlRotation = false; // Camera does not rotate relative to arm
 
 	AbilitySystem = CreateDefaultSubobject<UAbilitySystemComponent>(TEXT("AbilitySystem"));
+	AttributeSet = CreateDefaultSubobject<UWarlockAttributeSet>(TEXT("AttributeSet"));
 
 	bAlwaysRelevant = true;
 }
@@ -61,6 +62,14 @@ void ASimpleGASCharacter::SetupPlayerInputComponent(class UInputComponent* Playe
 void ASimpleGASCharacter::BeginPlay()
 {
 	Super::BeginPlay();
+}
+
+void ASimpleGASCharacter::GiveStartingAbilities()
+{
+	if (Role != ROLE_Authority || !AbilitySystem)
+	{
+		return;
+	}
 	if (AbilitySystem)
 	{
 		if (HasAuthority())
@@ -71,7 +80,26 @@ void ASimpleGASCharacter::BeginPlay()
 				AbilitySystem->GiveAbility(FGameplayAbilitySpec(Abilities[i].GetDefaultObject(), 1, i));
 			}
 		}
-		AbilitySystem->InitAbilityActorInfo(this, this);
+		//AbilitySystem->InitAbilityActorInfo(GetPlayerState<AWarlockPlayerState>(), this);
+	}
+}
+
+void ASimpleGASCharacter::GiveStartingEffects()
+{
+	if (Role != ROLE_Authority || !AbilitySystem)
+	{
+		return;
+	}
+	FGameplayEffectContextHandle EffectContext = AbilitySystem->MakeEffectContext();
+	EffectContext.AddSourceObject(this);
+
+	for (TSubclassOf<UGameplayEffect> GameplayEffect : StartupEffects)
+	{
+		FGameplayEffectSpecHandle NewHandle = AbilitySystem->MakeOutgoingSpec(GameplayEffect, 1, EffectContext);
+		if (NewHandle.IsValid())
+		{
+			FActiveGameplayEffectHandle ActiveGEHandle = AbilitySystem->ApplyGameplayEffectSpecToTarget(*NewHandle.Data.Get(), AbilitySystem);
+		}
 	}
 }
 
@@ -92,10 +120,19 @@ void ASimpleGASCharacter::SetupAbilitySystemAndAttributes()
 		// AI won't have PlayerControllers so we can init again here just to be sure. No harm in initing twice for heroes that have PlayerControllers.
 		PS->GetAbilitySystemComponent()->InitAbilityActorInfo(PS, this);
 
-		// Set the AttributeSetBase for convenience attribute functions
 		AttributeSet = PS->AttributeSet;
 
-		//AddCharacterAbilities();
+		if (!PS->bHasDefaultAbilities)
+		{
+			GiveStartingAbilities();
+			GiveStartingEffects();
+			PS->bHasDefaultAbilities = true;
+		}
+	}
+	else //AI characters
+	{
+		AbilitySystem->InitAbilityActorInfo(this, this);
+		GiveStartingAbilities();
 	}
 }
 

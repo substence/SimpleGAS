@@ -5,14 +5,16 @@
 #include "CoreMinimal.h"
 #include "AbilitySystemInterface.h"
 #include "GameFramework/Character.h"
+#include "WarlockAttributeSet.h"
+#include "GameplayEffectTypes.h"
 #include "SimpleGASCharacter.generated.h"
 
 UENUM(BlueprintType)
 enum class AbilityInput : uint8
 {
-	Fire UMETA(DisplayName = "Primary Fire"),
-	Jump UMETA(DisplayName = "Jump"),
-	Slide UMETA(DisplayName = "Slide"),
+	Attack UMETA(DisplayName = "Attack"),
+	Movement UMETA(DisplayName = "Movement"),
+	Defense UMETA(DisplayName = "Defense"),
 	UseAbility1 UMETA(DisplayName = "Use Spell 1"),
 };
 UCLASS(config=Game)
@@ -43,11 +45,14 @@ public:
 		return AbilitySystem;
 	};
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Abilities)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Abilities")
 		TArray<TSubclassOf<class UGameplayAbility>> Abilities;
 
 	UPROPERTY(BlueprintReadOnly, Category = "Attribute Set")
 		class UWarlockAttributeSet* AttributeSet;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Abilities")
+		TArray<TSubclassOf<class UGameplayEffect>> StartupEffects;
 
 protected:
 	void OnRep_PlayerState() override;
@@ -59,6 +64,9 @@ protected:
 	// End of APawn interface
 
 	void BeginPlay() override;
+
+	void GiveStartingAbilities();
+	void GiveStartingEffects();
 
 	void PossessedBy(AController* NewController) override;
 	void SetupAbilitySystemAndAttributes();

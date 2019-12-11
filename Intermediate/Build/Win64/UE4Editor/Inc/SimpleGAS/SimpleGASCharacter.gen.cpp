@@ -18,8 +18,9 @@ void EmptyLinkFunctionForGeneratedCodeSimpleGASCharacter() {}
 	SIMPLEGAS_API UClass* Z_Construct_UClass_ASimpleGASCharacter_NoRegister();
 	SIMPLEGAS_API UClass* Z_Construct_UClass_ASimpleGASCharacter();
 	ENGINE_API UClass* Z_Construct_UClass_ACharacter();
-	SIMPLEGAS_API UClass* Z_Construct_UClass_UWarlockAttributeSet_NoRegister();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
+	GAMEPLAYABILITIES_API UClass* Z_Construct_UClass_UGameplayEffect_NoRegister();
+	SIMPLEGAS_API UClass* Z_Construct_UClass_UWarlockAttributeSet_NoRegister();
 	GAMEPLAYABILITIES_API UClass* Z_Construct_UClass_UGameplayAbility_NoRegister();
 	GAMEPLAYABILITIES_API UClass* Z_Construct_UClass_UAbilitySystemComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
@@ -40,7 +41,7 @@ void EmptyLinkFunctionForGeneratedCodeSimpleGASCharacter() {}
 		return AbilityInput_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_AbilityInput(AbilityInput_StaticEnum, TEXT("/Script/SimpleGAS"), TEXT("AbilityInput"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_SimpleGAS_AbilityInput_Hash() { return 2820907060U; }
+	uint32 Get_Z_Construct_UEnum_SimpleGAS_AbilityInput_Hash() { return 1159786018U; }
 	UEnum* Z_Construct_UEnum_SimpleGAS_AbilityInput()
 	{
 #if WITH_HOT_RELOAD
@@ -52,21 +53,21 @@ void EmptyLinkFunctionForGeneratedCodeSimpleGASCharacter() {}
 		if (!ReturnEnum)
 		{
 			static const UE4CodeGen_Private::FEnumeratorParam Enumerators[] = {
-				{ "AbilityInput::Fire", (int64)AbilityInput::Fire },
-				{ "AbilityInput::Jump", (int64)AbilityInput::Jump },
-				{ "AbilityInput::Slide", (int64)AbilityInput::Slide },
+				{ "AbilityInput::Attack", (int64)AbilityInput::Attack },
+				{ "AbilityInput::Movement", (int64)AbilityInput::Movement },
+				{ "AbilityInput::Defense", (int64)AbilityInput::Defense },
 				{ "AbilityInput::UseAbility1", (int64)AbilityInput::UseAbility1 },
 			};
 #if WITH_METADATA
 			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
+				{ "Attack.DisplayName", "Attack" },
+				{ "Attack.Name", "AbilityInput::Attack" },
 				{ "BlueprintType", "true" },
-				{ "Fire.DisplayName", "Primary Fire" },
-				{ "Fire.Name", "AbilityInput::Fire" },
-				{ "Jump.DisplayName", "Jump" },
-				{ "Jump.Name", "AbilityInput::Jump" },
+				{ "Defense.DisplayName", "Defense" },
+				{ "Defense.Name", "AbilityInput::Defense" },
 				{ "ModuleRelativePath", "SimpleGASCharacter.h" },
-				{ "Slide.DisplayName", "Slide" },
-				{ "Slide.Name", "AbilityInput::Slide" },
+				{ "Movement.DisplayName", "Movement" },
+				{ "Movement.Name", "AbilityInput::Movement" },
 				{ "UseAbility1.DisplayName", "Use Spell 1" },
 				{ "UseAbility1.Name", "AbilityInput::UseAbility1" },
 			};
@@ -100,6 +101,11 @@ void EmptyLinkFunctionForGeneratedCodeSimpleGASCharacter() {}
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_StartupEffects_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FArrayPropertyParams NewProp_StartupEffects;
+		static const UE4CodeGen_Private::FClassPropertyParams NewProp_StartupEffects_Inner;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AttributeSet_MetaData[];
 #endif
@@ -137,6 +143,14 @@ void EmptyLinkFunctionForGeneratedCodeSimpleGASCharacter() {}
 		{ "ModuleRelativePath", "SimpleGASCharacter.h" },
 	};
 #endif
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASimpleGASCharacter_Statics::NewProp_StartupEffects_MetaData[] = {
+		{ "Category", "Abilities" },
+		{ "ModuleRelativePath", "SimpleGASCharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UClass_ASimpleGASCharacter_Statics::NewProp_StartupEffects = { "StartupEffects", nullptr, (EPropertyFlags)0x0014000000000005, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ASimpleGASCharacter, StartupEffects), METADATA_PARAMS(Z_Construct_UClass_ASimpleGASCharacter_Statics::NewProp_StartupEffects_MetaData, ARRAY_COUNT(Z_Construct_UClass_ASimpleGASCharacter_Statics::NewProp_StartupEffects_MetaData)) };
+	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_ASimpleGASCharacter_Statics::NewProp_StartupEffects_Inner = { "StartupEffects", nullptr, (EPropertyFlags)0x0004000000000000, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UClass_UGameplayEffect_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASimpleGASCharacter_Statics::NewProp_AttributeSet_MetaData[] = {
 		{ "Category", "Attribute Set" },
@@ -185,6 +199,8 @@ void EmptyLinkFunctionForGeneratedCodeSimpleGASCharacter() {}
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASimpleGASCharacter_Statics::NewProp_CameraBoom = { "CameraBoom", nullptr, (EPropertyFlags)0x00400000000a001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ASimpleGASCharacter, CameraBoom), Z_Construct_UClass_USpringArmComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ASimpleGASCharacter_Statics::NewProp_CameraBoom_MetaData, ARRAY_COUNT(Z_Construct_UClass_ASimpleGASCharacter_Statics::NewProp_CameraBoom_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ASimpleGASCharacter_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASimpleGASCharacter_Statics::NewProp_StartupEffects,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASimpleGASCharacter_Statics::NewProp_StartupEffects_Inner,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASimpleGASCharacter_Statics::NewProp_AttributeSet,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASimpleGASCharacter_Statics::NewProp_Abilities,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASimpleGASCharacter_Statics::NewProp_Abilities_Inner,
@@ -222,7 +238,7 @@ void EmptyLinkFunctionForGeneratedCodeSimpleGASCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ASimpleGASCharacter, 4221865513);
+	IMPLEMENT_CLASS(ASimpleGASCharacter, 2999103887);
 	template<> SIMPLEGAS_API UClass* StaticClass<ASimpleGASCharacter>()
 	{
 		return ASimpleGASCharacter::StaticClass();
