@@ -124,12 +124,14 @@ void ASimpleGASCharacter::SetupAbilitySystemAndAttributes()
 		// AI won't have PlayerControllers so we can init again here just to be sure. No harm in initing twice for heroes that have PlayerControllers.
 		AbilitySystem->InitAbilityActorInfo(PS, this);
 
+		GiveStartingEffects();
+
 		if (!PS->bHasDefaultAbilities)
 		{
 			GiveStartingAbilities();
-			GiveStartingEffects();
 			PS->bHasDefaultAbilities = true;
 		}
+		OnAbilitySystemComponentSet.Broadcast(AbilitySystem);
 	}
 	else //AI characters
 	{

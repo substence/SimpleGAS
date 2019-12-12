@@ -13,20 +13,62 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeSimpleGASCharacter() {}
 // Cross Module References
-	SIMPLEGAS_API UEnum* Z_Construct_UEnum_SimpleGAS_AbilityInput();
+	SIMPLEGAS_API UFunction* Z_Construct_UDelegateFunction_SimpleGAS_AbilityComponentSetDelegate__DelegateSignature();
 	UPackage* Z_Construct_UPackage__Script_SimpleGAS();
+	GAMEPLAYABILITIES_API UClass* Z_Construct_UClass_UAbilitySystemComponent_NoRegister();
+	SIMPLEGAS_API UEnum* Z_Construct_UEnum_SimpleGAS_AbilityInput();
 	SIMPLEGAS_API UClass* Z_Construct_UClass_ASimpleGASCharacter_NoRegister();
 	SIMPLEGAS_API UClass* Z_Construct_UClass_ASimpleGASCharacter();
 	ENGINE_API UClass* Z_Construct_UClass_ACharacter();
+	SIMPLEGAS_API UFunction* Z_Construct_UFunction_ASimpleGASCharacter_OnAbilitySystemSet();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 	GAMEPLAYABILITIES_API UClass* Z_Construct_UClass_UGameplayEffect_NoRegister();
 	SIMPLEGAS_API UClass* Z_Construct_UClass_UWarlockAttributeSet_NoRegister();
 	GAMEPLAYABILITIES_API UClass* Z_Construct_UClass_UGameplayAbility_NoRegister();
-	GAMEPLAYABILITIES_API UClass* Z_Construct_UClass_UAbilitySystemComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
 	GAMEPLAYABILITIES_API UClass* Z_Construct_UClass_UAbilitySystemInterface_NoRegister();
 // End Cross Module References
+	struct Z_Construct_UDelegateFunction_SimpleGAS_AbilityComponentSetDelegate__DelegateSignature_Statics
+	{
+		struct _Script_SimpleGAS_eventAbilityComponentSetDelegate_Parms
+		{
+			UAbilitySystemComponent* AbilitySystemComponent;
+		};
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AbilitySystemComponent_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_AbilitySystemComponent;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UDelegateFunction_SimpleGAS_AbilityComponentSetDelegate__DelegateSignature_Statics::NewProp_AbilitySystemComponent_MetaData[] = {
+		{ "EditInline", "true" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UDelegateFunction_SimpleGAS_AbilityComponentSetDelegate__DelegateSignature_Statics::NewProp_AbilitySystemComponent = { "AbilitySystemComponent", nullptr, (EPropertyFlags)0x0010000000080080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(_Script_SimpleGAS_eventAbilityComponentSetDelegate_Parms, AbilitySystemComponent), Z_Construct_UClass_UAbilitySystemComponent_NoRegister, METADATA_PARAMS(Z_Construct_UDelegateFunction_SimpleGAS_AbilityComponentSetDelegate__DelegateSignature_Statics::NewProp_AbilitySystemComponent_MetaData, ARRAY_COUNT(Z_Construct_UDelegateFunction_SimpleGAS_AbilityComponentSetDelegate__DelegateSignature_Statics::NewProp_AbilitySystemComponent_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UDelegateFunction_SimpleGAS_AbilityComponentSetDelegate__DelegateSignature_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_SimpleGAS_AbilityComponentSetDelegate__DelegateSignature_Statics::NewProp_AbilitySystemComponent,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UDelegateFunction_SimpleGAS_AbilityComponentSetDelegate__DelegateSignature_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "SimpleGASCharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_SimpleGAS_AbilityComponentSetDelegate__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UPackage__Script_SimpleGAS, nullptr, "AbilityComponentSetDelegate__DelegateSignature", nullptr, nullptr, sizeof(_Script_SimpleGAS_eventAbilityComponentSetDelegate_Parms), Z_Construct_UDelegateFunction_SimpleGAS_AbilityComponentSetDelegate__DelegateSignature_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UDelegateFunction_SimpleGAS_AbilityComponentSetDelegate__DelegateSignature_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00130000, 0, 0, METADATA_PARAMS(Z_Construct_UDelegateFunction_SimpleGAS_AbilityComponentSetDelegate__DelegateSignature_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UDelegateFunction_SimpleGAS_AbilityComponentSetDelegate__DelegateSignature_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UDelegateFunction_SimpleGAS_AbilityComponentSetDelegate__DelegateSignature()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UDelegateFunction_SimpleGAS_AbilityComponentSetDelegate__DelegateSignature_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	static UEnum* AbilityInput_StaticEnum()
 	{
 		static UEnum* Singleton = nullptr;
@@ -88,8 +130,52 @@ void EmptyLinkFunctionForGeneratedCodeSimpleGASCharacter() {}
 		}
 		return ReturnEnum;
 	}
+	static FName NAME_ASimpleGASCharacter_OnAbilitySystemSet = FName(TEXT("OnAbilitySystemSet"));
+	void ASimpleGASCharacter::OnAbilitySystemSet(UAbilitySystemComponent* AbilitySystemComponent)
+	{
+		SimpleGASCharacter_eventOnAbilitySystemSet_Parms Parms;
+		Parms.AbilitySystemComponent=AbilitySystemComponent;
+		ProcessEvent(FindFunctionChecked(NAME_ASimpleGASCharacter_OnAbilitySystemSet),&Parms);
+	}
 	void ASimpleGASCharacter::StaticRegisterNativesASimpleGASCharacter()
 	{
+	}
+	struct Z_Construct_UFunction_ASimpleGASCharacter_OnAbilitySystemSet_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AbilitySystemComponent_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_AbilitySystemComponent;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ASimpleGASCharacter_OnAbilitySystemSet_Statics::NewProp_AbilitySystemComponent_MetaData[] = {
+		{ "EditInline", "true" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_ASimpleGASCharacter_OnAbilitySystemSet_Statics::NewProp_AbilitySystemComponent = { "AbilitySystemComponent", nullptr, (EPropertyFlags)0x0010000000080080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(SimpleGASCharacter_eventOnAbilitySystemSet_Parms, AbilitySystemComponent), Z_Construct_UClass_UAbilitySystemComponent_NoRegister, METADATA_PARAMS(Z_Construct_UFunction_ASimpleGASCharacter_OnAbilitySystemSet_Statics::NewProp_AbilitySystemComponent_MetaData, ARRAY_COUNT(Z_Construct_UFunction_ASimpleGASCharacter_OnAbilitySystemSet_Statics::NewProp_AbilitySystemComponent_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ASimpleGASCharacter_OnAbilitySystemSet_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ASimpleGASCharacter_OnAbilitySystemSet_Statics::NewProp_AbilitySystemComponent,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ASimpleGASCharacter_OnAbilitySystemSet_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Abilities" },
+		{ "ModuleRelativePath", "SimpleGASCharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ASimpleGASCharacter_OnAbilitySystemSet_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ASimpleGASCharacter, nullptr, "OnAbilitySystemSet", nullptr, nullptr, sizeof(SimpleGASCharacter_eventOnAbilitySystemSet_Parms), Z_Construct_UFunction_ASimpleGASCharacter_OnAbilitySystemSet_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_ASimpleGASCharacter_OnAbilitySystemSet_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x0C020800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ASimpleGASCharacter_OnAbilitySystemSet_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_ASimpleGASCharacter_OnAbilitySystemSet_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ASimpleGASCharacter_OnAbilitySystemSet()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ASimpleGASCharacter_OnAbilitySystemSet_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	UClass* Z_Construct_UClass_ASimpleGASCharacter_NoRegister()
 	{
@@ -98,9 +184,14 @@ void EmptyLinkFunctionForGeneratedCodeSimpleGASCharacter() {}
 	struct Z_Construct_UClass_ASimpleGASCharacter_Statics
 	{
 		static UObject* (*const DependentSingletons[])();
+		static const FClassFunctionLinkInfo FuncInfo[];
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_OnAbilitySystemComponentSet_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FMulticastDelegatePropertyParams NewProp_OnAbilitySystemComponentSet;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_StartupEffects_MetaData[];
 #endif
@@ -136,6 +227,9 @@ void EmptyLinkFunctionForGeneratedCodeSimpleGASCharacter() {}
 		(UObject* (*)())Z_Construct_UClass_ACharacter,
 		(UObject* (*)())Z_Construct_UPackage__Script_SimpleGAS,
 	};
+	const FClassFunctionLinkInfo Z_Construct_UClass_ASimpleGASCharacter_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_ASimpleGASCharacter_OnAbilitySystemSet, "OnAbilitySystemSet" }, // 3580688328
+	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASimpleGASCharacter_Statics::Class_MetaDataParams[] = {
 		{ "HideCategories", "Navigation" },
@@ -143,6 +237,13 @@ void EmptyLinkFunctionForGeneratedCodeSimpleGASCharacter() {}
 		{ "ModuleRelativePath", "SimpleGASCharacter.h" },
 	};
 #endif
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASimpleGASCharacter_Statics::NewProp_OnAbilitySystemComponentSet_MetaData[] = {
+		{ "Category", "Abilities" },
+		{ "ModuleRelativePath", "SimpleGASCharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_ASimpleGASCharacter_Statics::NewProp_OnAbilitySystemComponentSet = { "OnAbilitySystemComponentSet", nullptr, (EPropertyFlags)0x0010000010080000, UE4CodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ASimpleGASCharacter, OnAbilitySystemComponentSet), Z_Construct_UDelegateFunction_SimpleGAS_AbilityComponentSetDelegate__DelegateSignature, METADATA_PARAMS(Z_Construct_UClass_ASimpleGASCharacter_Statics::NewProp_OnAbilitySystemComponentSet_MetaData, ARRAY_COUNT(Z_Construct_UClass_ASimpleGASCharacter_Statics::NewProp_OnAbilitySystemComponentSet_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASimpleGASCharacter_Statics::NewProp_StartupEffects_MetaData[] = {
 		{ "Category", "Abilities" },
@@ -199,6 +300,7 @@ void EmptyLinkFunctionForGeneratedCodeSimpleGASCharacter() {}
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASimpleGASCharacter_Statics::NewProp_CameraBoom = { "CameraBoom", nullptr, (EPropertyFlags)0x00400000000a001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ASimpleGASCharacter, CameraBoom), Z_Construct_UClass_USpringArmComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ASimpleGASCharacter_Statics::NewProp_CameraBoom_MetaData, ARRAY_COUNT(Z_Construct_UClass_ASimpleGASCharacter_Statics::NewProp_CameraBoom_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ASimpleGASCharacter_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASimpleGASCharacter_Statics::NewProp_OnAbilitySystemComponentSet,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASimpleGASCharacter_Statics::NewProp_StartupEffects,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASimpleGASCharacter_Statics::NewProp_StartupEffects_Inner,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASimpleGASCharacter_Statics::NewProp_AttributeSet,
@@ -219,11 +321,11 @@ void EmptyLinkFunctionForGeneratedCodeSimpleGASCharacter() {}
 		"Game",
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
-		nullptr,
+		FuncInfo,
 		Z_Construct_UClass_ASimpleGASCharacter_Statics::PropPointers,
 		InterfaceParams,
 		ARRAY_COUNT(DependentSingletons),
-		0,
+		ARRAY_COUNT(FuncInfo),
 		ARRAY_COUNT(Z_Construct_UClass_ASimpleGASCharacter_Statics::PropPointers),
 		ARRAY_COUNT(InterfaceParams),
 		0x008000A0u,
@@ -238,7 +340,7 @@ void EmptyLinkFunctionForGeneratedCodeSimpleGASCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ASimpleGASCharacter, 2999103887);
+	IMPLEMENT_CLASS(ASimpleGASCharacter, 1020643314);
 	template<> SIMPLEGAS_API UClass* StaticClass<ASimpleGASCharacter>()
 	{
 		return ASimpleGASCharacter::StaticClass();

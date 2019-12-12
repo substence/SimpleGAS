@@ -17,6 +17,7 @@ enum class AbilityInput : uint8
 	Defense UMETA(DisplayName = "Defense"),
 	UseAbility1 UMETA(DisplayName = "Use Spell 1"),
 };
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FAbilityComponentSetDelegate, UAbilitySystemComponent*, AbilitySystemComponent);
 UCLASS(config=Game)
 class ASimpleGASCharacter : public ACharacter, public IAbilitySystemInterface
 {
@@ -53,6 +54,9 @@ public:
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Abilities")
 		TArray<TSubclassOf<class UGameplayEffect>> StartupEffects;
+
+	UPROPERTY(BlueprintAssignable, Category = "Abilities")
+		FAbilityComponentSetDelegate OnAbilitySystemComponentSet;
 
 protected:
 	void OnRep_PlayerState() override;

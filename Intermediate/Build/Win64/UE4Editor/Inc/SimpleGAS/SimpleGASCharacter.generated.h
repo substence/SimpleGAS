@@ -8,14 +8,36 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class UAbilitySystemComponent;
 #ifdef SIMPLEGAS_SimpleGASCharacter_generated_h
 #error "SimpleGASCharacter.generated.h already included, missing '#pragma once' in SimpleGASCharacter.h"
 #endif
 #define SIMPLEGAS_SimpleGASCharacter_generated_h
 
-#define SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_23_RPC_WRAPPERS
-#define SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_23_RPC_WRAPPERS_NO_PURE_DECLS
-#define SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_23_INCLASS_NO_PURE_DECLS \
+#define SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_20_DELEGATE \
+struct _Script_SimpleGAS_eventAbilityComponentSetDelegate_Parms \
+{ \
+	UAbilitySystemComponent* AbilitySystemComponent; \
+}; \
+static inline void FAbilityComponentSetDelegate_DelegateWrapper(const FMulticastScriptDelegate& AbilityComponentSetDelegate, UAbilitySystemComponent* AbilitySystemComponent) \
+{ \
+	_Script_SimpleGAS_eventAbilityComponentSetDelegate_Parms Parms; \
+	Parms.AbilitySystemComponent=AbilitySystemComponent; \
+	AbilityComponentSetDelegate.ProcessMulticastDelegate<UObject>(&Parms); \
+}
+
+
+#define SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_24_RPC_WRAPPERS
+#define SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_24_RPC_WRAPPERS_NO_PURE_DECLS
+#define SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_24_EVENT_PARMS \
+	struct SimpleGASCharacter_eventOnAbilitySystemSet_Parms \
+	{ \
+		UAbilitySystemComponent* AbilitySystemComponent; \
+	};
+
+
+#define SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_24_CALLBACK_WRAPPERS
+#define SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_24_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesASimpleGASCharacter(); \
 	friend struct Z_Construct_UClass_ASimpleGASCharacter_Statics; \
@@ -25,7 +47,7 @@ public: \
 	virtual UObject* _getUObject() const override { return const_cast<ASimpleGASCharacter*>(this); }
 
 
-#define SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_23_INCLASS \
+#define SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_24_INCLASS \
 private: \
 	static void StaticRegisterNativesASimpleGASCharacter(); \
 	friend struct Z_Construct_UClass_ASimpleGASCharacter_Statics; \
@@ -35,7 +57,7 @@ public: \
 	virtual UObject* _getUObject() const override { return const_cast<ASimpleGASCharacter*>(this); }
 
 
-#define SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_23_STANDARD_CONSTRUCTORS \
+#define SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_24_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API ASimpleGASCharacter(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ASimpleGASCharacter) \
@@ -48,7 +70,7 @@ private: \
 public:
 
 
-#define SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_23_ENHANCED_CONSTRUCTORS \
+#define SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_24_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API ASimpleGASCharacter(ASimpleGASCharacter&&); \
@@ -59,31 +81,36 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ASimpleGASCharacter); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ASimpleGASCharacter)
 
 
-#define SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_23_PRIVATE_PROPERTY_OFFSET \
+#define SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_24_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__CameraBoom() { return STRUCT_OFFSET(ASimpleGASCharacter, CameraBoom); } \
 	FORCEINLINE static uint32 __PPO__FollowCamera() { return STRUCT_OFFSET(ASimpleGASCharacter, FollowCamera); } \
 	FORCEINLINE static uint32 __PPO__AbilitySystem() { return STRUCT_OFFSET(ASimpleGASCharacter, AbilitySystem); }
 
 
-#define SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_20_PROLOG
-#define SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_23_GENERATED_BODY_LEGACY \
+#define SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_21_PROLOG \
+	SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_24_EVENT_PARMS
+
+
+#define SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_24_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_23_PRIVATE_PROPERTY_OFFSET \
-	SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_23_RPC_WRAPPERS \
-	SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_23_INCLASS \
-	SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_23_STANDARD_CONSTRUCTORS \
+	SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_24_PRIVATE_PROPERTY_OFFSET \
+	SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_24_RPC_WRAPPERS \
+	SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_24_CALLBACK_WRAPPERS \
+	SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_24_INCLASS \
+	SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_24_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_23_GENERATED_BODY \
+#define SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_24_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_23_PRIVATE_PROPERTY_OFFSET \
-	SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_23_RPC_WRAPPERS_NO_PURE_DECLS \
-	SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_23_INCLASS_NO_PURE_DECLS \
-	SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_23_ENHANCED_CONSTRUCTORS \
+	SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_24_PRIVATE_PROPERTY_OFFSET \
+	SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_24_RPC_WRAPPERS_NO_PURE_DECLS \
+	SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_24_CALLBACK_WRAPPERS \
+	SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_24_INCLASS_NO_PURE_DECLS \
+	SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_24_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
