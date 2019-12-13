@@ -27,8 +27,8 @@ void EmptyLinkFunctionForGeneratedCodeSimpleGAS_init() {}
 				SingletonFuncArray,
 				ARRAY_COUNT(SingletonFuncArray),
 				PKG_CompiledIn | 0x00000000,
-				0x4B6E07D6,
-				0x968D032F,
+				0xECE52A44,
+				0xF8481343,
 				METADATA_PARAMS(nullptr, 0)
 			};
 			UE4CodeGen_Private::ConstructUPackage(ReturnPackage, PackageParams);
