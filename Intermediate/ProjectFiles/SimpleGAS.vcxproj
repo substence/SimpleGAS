@@ -382,8 +382,6 @@
     <ClCompile Include="..\..\Source\SimpleGAS\SimpleGAS.cpp" />
     <ClInclude Include="..\..\Source\SimpleGAS\SimpleGAS.h" />
     <ClCompile Include="..\..\Source\SimpleGAS\SimpleGASCharacter.cpp" />
-    <None Include="..\..\Source\SimpleGAS\SimpleGASCharacter.cpp___jb_old___" />
-    <None Include="..\..\Source\SimpleGAS\SimpleGASCharacter.cpp___jb_tmp___" />
     <ClInclude Include="..\..\Source\SimpleGAS\SimpleGASCharacter.h" />
     <ClCompile Include="..\..\Source\SimpleGAS\SimpleGASGameMode.cpp" />
     <ClInclude Include="..\..\Source\SimpleGAS\SimpleGASGameMode.h" />

@@ -44,12 +44,6 @@
     <ClCompile Include="..\..\Source\SimpleGAS\SimpleGASCharacter.cpp">
       <Filter>Source\SimpleGAS</Filter>
     </ClCompile>
-    <None Include="..\..\Source\SimpleGAS\SimpleGASCharacter.cpp___jb_old___">
-      <Filter>Source\SimpleGAS</Filter>
-    </None>
-    <None Include="..\..\Source\SimpleGAS\SimpleGASCharacter.cpp___jb_tmp___">
-      <Filter>Source\SimpleGAS</Filter>
-    </None>
     <ClInclude Include="..\..\Source\SimpleGAS\SimpleGASCharacter.h">
       <Filter>Source\SimpleGAS</Filter>
     </ClInclude>
