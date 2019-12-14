@@ -42,7 +42,8 @@ ASimpleGASCharacter::ASimpleGASCharacter()
 	FollowCamera->SetupAttachment(CameraBoom, USpringArmComponent::SocketName); // Attach the camera to the end of the boom and let the boom adjust to match the controller orientation
 	FollowCamera->bUsePawnControlRotation = false; // Camera does not rotate relative to arm
 
-	AbilitySystem = CreateDefaultSubobject<UAbilitySystemComponent>(TEXT("AbilitySystem"));
+	//AbilitySystem = CreateDefaultSubobject<UAbilitySystemComponent>(TEXT("AbilitySystem"));
+	//GiveStartingEffects();
 	//AttributeSet = CreateDefaultSubobject<UWarlockAttributeSet>(TEXT("AttributeSet"));
 
 	bAlwaysRelevant = true;
@@ -137,8 +138,10 @@ void ASimpleGASCharacter::SetupAbilitySystemAndAttributes()
 	{
 		if (AbilitySystem)
 		{
-			//AbilitySystem->InitAbilityActorInfo(this, this);
+			AbilitySystem->InitAbilityActorInfo(GetController(), this);
 			//GiveStartingAbilities();
+			GiveStartingEffects();
+			OnAbilitySystemComponentSet.Broadcast(AbilitySystem);
 		}
 	}
 }
