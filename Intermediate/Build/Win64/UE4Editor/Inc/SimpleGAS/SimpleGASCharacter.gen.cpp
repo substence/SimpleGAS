@@ -20,6 +20,7 @@ void EmptyLinkFunctionForGeneratedCodeSimpleGASCharacter() {}
 	SIMPLEGAS_API UClass* Z_Construct_UClass_ASimpleGASCharacter_NoRegister();
 	SIMPLEGAS_API UClass* Z_Construct_UClass_ASimpleGASCharacter();
 	ENGINE_API UClass* Z_Construct_UClass_ACharacter();
+	SIMPLEGAS_API UFunction* Z_Construct_UFunction_ASimpleGASCharacter_OnAbilitySystemSet();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 	GAMEPLAYABILITIES_API UClass* Z_Construct_UClass_UGameplayEffect_NoRegister();
 	SIMPLEGAS_API UClass* Z_Construct_UClass_UWarlockAttributeSet_NoRegister();
@@ -129,8 +130,52 @@ void EmptyLinkFunctionForGeneratedCodeSimpleGASCharacter() {}
 		}
 		return ReturnEnum;
 	}
+	static FName NAME_ASimpleGASCharacter_OnAbilitySystemSet = FName(TEXT("OnAbilitySystemSet"));
+	void ASimpleGASCharacter::OnAbilitySystemSet(UAbilitySystemComponent* AbilitySystemComponent)
+	{
+		SimpleGASCharacter_eventOnAbilitySystemSet_Parms Parms;
+		Parms.AbilitySystemComponent=AbilitySystemComponent;
+		ProcessEvent(FindFunctionChecked(NAME_ASimpleGASCharacter_OnAbilitySystemSet),&Parms);
+	}
 	void ASimpleGASCharacter::StaticRegisterNativesASimpleGASCharacter()
 	{
+	}
+	struct Z_Construct_UFunction_ASimpleGASCharacter_OnAbilitySystemSet_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AbilitySystemComponent_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_AbilitySystemComponent;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ASimpleGASCharacter_OnAbilitySystemSet_Statics::NewProp_AbilitySystemComponent_MetaData[] = {
+		{ "EditInline", "true" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_ASimpleGASCharacter_OnAbilitySystemSet_Statics::NewProp_AbilitySystemComponent = { "AbilitySystemComponent", nullptr, (EPropertyFlags)0x0010000000080080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(SimpleGASCharacter_eventOnAbilitySystemSet_Parms, AbilitySystemComponent), Z_Construct_UClass_UAbilitySystemComponent_NoRegister, METADATA_PARAMS(Z_Construct_UFunction_ASimpleGASCharacter_OnAbilitySystemSet_Statics::NewProp_AbilitySystemComponent_MetaData, ARRAY_COUNT(Z_Construct_UFunction_ASimpleGASCharacter_OnAbilitySystemSet_Statics::NewProp_AbilitySystemComponent_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ASimpleGASCharacter_OnAbilitySystemSet_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ASimpleGASCharacter_OnAbilitySystemSet_Statics::NewProp_AbilitySystemComponent,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ASimpleGASCharacter_OnAbilitySystemSet_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Abilities" },
+		{ "ModuleRelativePath", "SimpleGASCharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ASimpleGASCharacter_OnAbilitySystemSet_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ASimpleGASCharacter, nullptr, "OnAbilitySystemSet", nullptr, nullptr, sizeof(SimpleGASCharacter_eventOnAbilitySystemSet_Parms), Z_Construct_UFunction_ASimpleGASCharacter_OnAbilitySystemSet_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_ASimpleGASCharacter_OnAbilitySystemSet_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x0C020800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ASimpleGASCharacter_OnAbilitySystemSet_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_ASimpleGASCharacter_OnAbilitySystemSet_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ASimpleGASCharacter_OnAbilitySystemSet()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ASimpleGASCharacter_OnAbilitySystemSet_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	UClass* Z_Construct_UClass_ASimpleGASCharacter_NoRegister()
 	{
@@ -139,6 +184,7 @@ void EmptyLinkFunctionForGeneratedCodeSimpleGASCharacter() {}
 	struct Z_Construct_UClass_ASimpleGASCharacter_Statics
 	{
 		static UObject* (*const DependentSingletons[])();
+		static const FClassFunctionLinkInfo FuncInfo[];
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
@@ -180,6 +226,9 @@ void EmptyLinkFunctionForGeneratedCodeSimpleGASCharacter() {}
 	UObject* (*const Z_Construct_UClass_ASimpleGASCharacter_Statics::DependentSingletons[])() = {
 		(UObject* (*)())Z_Construct_UClass_ACharacter,
 		(UObject* (*)())Z_Construct_UPackage__Script_SimpleGAS,
+	};
+	const FClassFunctionLinkInfo Z_Construct_UClass_ASimpleGASCharacter_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_ASimpleGASCharacter_OnAbilitySystemSet, "OnAbilitySystemSet" }, // 3580688328
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASimpleGASCharacter_Statics::Class_MetaDataParams[] = {
@@ -272,11 +321,11 @@ void EmptyLinkFunctionForGeneratedCodeSimpleGASCharacter() {}
 		"Game",
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
-		nullptr,
+		FuncInfo,
 		Z_Construct_UClass_ASimpleGASCharacter_Statics::PropPointers,
 		InterfaceParams,
 		ARRAY_COUNT(DependentSingletons),
-		0,
+		ARRAY_COUNT(FuncInfo),
 		ARRAY_COUNT(Z_Construct_UClass_ASimpleGASCharacter_Statics::PropPointers),
 		ARRAY_COUNT(InterfaceParams),
 		0x008000A0u,
@@ -291,7 +340,7 @@ void EmptyLinkFunctionForGeneratedCodeSimpleGASCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ASimpleGASCharacter, 3221095014);
+	IMPLEMENT_CLASS(ASimpleGASCharacter, 1020643314);
 	template<> SIMPLEGAS_API UClass* StaticClass<ASimpleGASCharacter>()
 	{
 		return ASimpleGASCharacter::StaticClass();

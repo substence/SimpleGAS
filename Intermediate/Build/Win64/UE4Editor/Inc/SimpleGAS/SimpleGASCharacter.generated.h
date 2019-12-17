@@ -29,6 +29,14 @@ static inline void FAbilityComponentSetDelegate_DelegateWrapper(const FMulticast
 
 #define SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_24_RPC_WRAPPERS
 #define SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_24_RPC_WRAPPERS_NO_PURE_DECLS
+#define SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_24_EVENT_PARMS \
+	struct SimpleGASCharacter_eventOnAbilitySystemSet_Parms \
+	{ \
+		UAbilitySystemComponent* AbilitySystemComponent; \
+	};
+
+
+#define SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_24_CALLBACK_WRAPPERS
 #define SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_24_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesASimpleGASCharacter(); \
@@ -79,12 +87,16 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ASimpleGASCharacter); \
 	FORCEINLINE static uint32 __PPO__AbilitySystem() { return STRUCT_OFFSET(ASimpleGASCharacter, AbilitySystem); }
 
 
-#define SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_21_PROLOG
+#define SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_21_PROLOG \
+	SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_24_EVENT_PARMS
+
+
 #define SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_24_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_24_PRIVATE_PROPERTY_OFFSET \
 	SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_24_RPC_WRAPPERS \
+	SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_24_CALLBACK_WRAPPERS \
 	SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_24_INCLASS \
 	SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_24_STANDARD_CONSTRUCTORS \
 public: \
@@ -96,6 +108,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_24_PRIVATE_PROPERTY_OFFSET \
 	SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_24_RPC_WRAPPERS_NO_PURE_DECLS \
+	SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_24_CALLBACK_WRAPPERS \
 	SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_24_INCLASS_NO_PURE_DECLS \
 	SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_24_ENHANCED_CONSTRUCTORS \
 private: \
