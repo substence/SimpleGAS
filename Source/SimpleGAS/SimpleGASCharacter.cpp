@@ -137,8 +137,10 @@ void ASimpleGASCharacter::SetupAbilitySystemAndAttributes()
 	{
 		if (AbilitySystem)
 		{
-			//AbilitySystem->InitAbilityActorInfo(this, this);
-			//GiveStartingAbilities();
+			AbilitySystem->InitAbilityActorInfo(GetController(), this);
+			GiveStartingEffects();
+			GiveStartingAbilities();
+			OnAbilitySystemComponentSet.Broadcast(AbilitySystem);
 		}
 	}
 }
