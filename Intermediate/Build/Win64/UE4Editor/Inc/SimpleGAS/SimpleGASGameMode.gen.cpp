@@ -51,18 +51,18 @@ void EmptyLinkFunctionForGeneratedCodeSimpleGASGameMode() {}
 	};
 	const UE4CodeGen_Private::FClassParams Z_Construct_UClass_ASimpleGASGameMode_Statics::ClassParams = {
 		&ASimpleGASGameMode::StaticClass,
-		nullptr,
+		"Game",
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
 		nullptr,
 		nullptr,
 		nullptr,
-		ARRAY_COUNT(DependentSingletons),
+		UE_ARRAY_COUNT(DependentSingletons),
 		0,
 		0,
 		0,
-		0x008802A8u,
-		METADATA_PARAMS(Z_Construct_UClass_ASimpleGASGameMode_Statics::Class_MetaDataParams, ARRAY_COUNT(Z_Construct_UClass_ASimpleGASGameMode_Statics::Class_MetaDataParams))
+		0x008802ACu,
+		METADATA_PARAMS(Z_Construct_UClass_ASimpleGASGameMode_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_ASimpleGASGameMode_Statics::Class_MetaDataParams))
 	};
 	UClass* Z_Construct_UClass_ASimpleGASGameMode()
 	{
@@ -73,7 +73,7 @@ void EmptyLinkFunctionForGeneratedCodeSimpleGASGameMode() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ASimpleGASGameMode, 4031507556);
+	IMPLEMENT_CLASS(ASimpleGASGameMode, 3099447156);
 	template<> SIMPLEGAS_API UClass* StaticClass<ASimpleGASGameMode>()
 	{
 		return ASimpleGASGameMode::StaticClass();

@@ -13,6 +13,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define SIMPLEGAS_SimpleGASGameMode_generated_h
 
+#define SimpleGAS_Source_SimpleGAS_SimpleGASGameMode_h_12_SPARSE_DATA
 #define SimpleGAS_Source_SimpleGAS_SimpleGASGameMode_h_12_RPC_WRAPPERS
 #define SimpleGAS_Source_SimpleGAS_SimpleGASGameMode_h_12_RPC_WRAPPERS_NO_PURE_DECLS
 #define SimpleGAS_Source_SimpleGAS_SimpleGASGameMode_h_12_INCLASS_NO_PURE_DECLS \
@@ -20,7 +21,7 @@ private: \
 	static void StaticRegisterNativesASimpleGASGameMode(); \
 	friend struct Z_Construct_UClass_ASimpleGASGameMode_Statics; \
 public: \
-	DECLARE_CLASS(ASimpleGASGameMode, AGameModeBase, COMPILED_IN_FLAGS(0 | CLASS_Transient), CASTCLASS_None, TEXT("/Script/SimpleGAS"), SIMPLEGAS_API) \
+	DECLARE_CLASS(ASimpleGASGameMode, AGameModeBase, COMPILED_IN_FLAGS(0 | CLASS_Transient | CLASS_Config), CASTCLASS_None, TEXT("/Script/SimpleGAS"), SIMPLEGAS_API) \
 	DECLARE_SERIALIZER(ASimpleGASGameMode)
 
 
@@ -29,7 +30,7 @@ private: \
 	static void StaticRegisterNativesASimpleGASGameMode(); \
 	friend struct Z_Construct_UClass_ASimpleGASGameMode_Statics; \
 public: \
-	DECLARE_CLASS(ASimpleGASGameMode, AGameModeBase, COMPILED_IN_FLAGS(0 | CLASS_Transient), CASTCLASS_None, TEXT("/Script/SimpleGAS"), SIMPLEGAS_API) \
+	DECLARE_CLASS(ASimpleGASGameMode, AGameModeBase, COMPILED_IN_FLAGS(0 | CLASS_Transient | CLASS_Config), CASTCLASS_None, TEXT("/Script/SimpleGAS"), SIMPLEGAS_API) \
 	DECLARE_SERIALIZER(ASimpleGASGameMode)
 
 
@@ -63,6 +64,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ASimpleGASGameMode); \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	SimpleGAS_Source_SimpleGAS_SimpleGASGameMode_h_12_PRIVATE_PROPERTY_OFFSET \
+	SimpleGAS_Source_SimpleGAS_SimpleGASGameMode_h_12_SPARSE_DATA \
 	SimpleGAS_Source_SimpleGAS_SimpleGASGameMode_h_12_RPC_WRAPPERS \
 	SimpleGAS_Source_SimpleGAS_SimpleGASGameMode_h_12_INCLASS \
 	SimpleGAS_Source_SimpleGAS_SimpleGASGameMode_h_12_STANDARD_CONSTRUCTORS \
@@ -74,6 +76,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	SimpleGAS_Source_SimpleGAS_SimpleGASGameMode_h_12_PRIVATE_PROPERTY_OFFSET \
+	SimpleGAS_Source_SimpleGAS_SimpleGASGameMode_h_12_SPARSE_DATA \
 	SimpleGAS_Source_SimpleGAS_SimpleGASGameMode_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
 	SimpleGAS_Source_SimpleGAS_SimpleGASGameMode_h_12_INCLASS_NO_PURE_DECLS \
 	SimpleGAS_Source_SimpleGAS_SimpleGASGameMode_h_12_ENHANCED_CONSTRUCTORS \

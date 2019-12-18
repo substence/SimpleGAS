@@ -1,3 +1,0 @@
-D:\workspace\SimpleGAS\Source\SimpleGAS\SimpleGAS.Build.cs
-D:\workspace\SimpleGAS\Source\SimpleGAS.Target.cs
-D:\workspace\SimpleGAS\Source\SimpleGASEditor.Target.cs

@@ -27,6 +27,7 @@ static inline void FAbilityComponentSetDelegate_DelegateWrapper(const FMulticast
 }
 
 
+#define SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_24_SPARSE_DATA
 #define SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_24_RPC_WRAPPERS
 #define SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_24_RPC_WRAPPERS_NO_PURE_DECLS
 #define SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_24_INCLASS_NO_PURE_DECLS \
@@ -34,7 +35,7 @@ private: \
 	static void StaticRegisterNativesASimpleGASCharacter(); \
 	friend struct Z_Construct_UClass_ASimpleGASCharacter_Statics; \
 public: \
-	DECLARE_CLASS(ASimpleGASCharacter, ACharacter, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/SimpleGAS"), NO_API) \
+	DECLARE_CLASS(ASimpleGASCharacter, ACharacter, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/SimpleGAS"), NO_API) \
 	DECLARE_SERIALIZER(ASimpleGASCharacter) \
 	virtual UObject* _getUObject() const override { return const_cast<ASimpleGASCharacter*>(this); }
 
@@ -44,7 +45,7 @@ private: \
 	static void StaticRegisterNativesASimpleGASCharacter(); \
 	friend struct Z_Construct_UClass_ASimpleGASCharacter_Statics; \
 public: \
-	DECLARE_CLASS(ASimpleGASCharacter, ACharacter, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/SimpleGAS"), NO_API) \
+	DECLARE_CLASS(ASimpleGASCharacter, ACharacter, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/SimpleGAS"), NO_API) \
 	DECLARE_SERIALIZER(ASimpleGASCharacter) \
 	virtual UObject* _getUObject() const override { return const_cast<ASimpleGASCharacter*>(this); }
 
@@ -84,6 +85,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ASimpleGASCharacter); \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_24_PRIVATE_PROPERTY_OFFSET \
+	SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_24_SPARSE_DATA \
 	SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_24_RPC_WRAPPERS \
 	SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_24_INCLASS \
 	SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_24_STANDARD_CONSTRUCTORS \
@@ -95,6 +97,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_24_PRIVATE_PROPERTY_OFFSET \
+	SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_24_SPARSE_DATA \
 	SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_24_RPC_WRAPPERS_NO_PURE_DECLS \
 	SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_24_INCLASS_NO_PURE_DECLS \
 	SimpleGAS_Source_SimpleGAS_SimpleGASCharacter_h_24_ENHANCED_CONSTRUCTORS \

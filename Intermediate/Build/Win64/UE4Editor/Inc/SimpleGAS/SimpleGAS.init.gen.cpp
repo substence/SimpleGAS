@@ -25,9 +25,9 @@ void EmptyLinkFunctionForGeneratedCodeSimpleGAS_init() {}
 			static const UE4CodeGen_Private::FPackageParams PackageParams = {
 				"/Script/SimpleGAS",
 				SingletonFuncArray,
-				ARRAY_COUNT(SingletonFuncArray),
+				UE_ARRAY_COUNT(SingletonFuncArray),
 				PKG_CompiledIn | 0x00000000,
-				0xECE52A44,
+				0xD983FA5D,
 				0xF8481343,
 				METADATA_PARAMS(nullptr, 0)
 			};
