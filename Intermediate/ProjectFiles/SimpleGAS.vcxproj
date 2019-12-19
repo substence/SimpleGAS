@@ -269,7 +269,6 @@
     <None Include="..\..\Source\SimpleGAS.Target.cs"/>
     <None Include="..\..\Source\SimpleGASEditor.Target.cs"/>
     <None Include="..\..\.gitignore"/>
-    <None Include="..\..\bfg.jar"/>
     <None Include="..\..\Config\DefaultEditor.ini"/>
     <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini"/>
     <None Include="..\..\Config\DefaultEngine.ini"/>

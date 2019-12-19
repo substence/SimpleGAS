@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\SimpleGAS.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{7C069705-7701-44AC-B04C-82547233AA15}</UniqueIdentifier>
+      <UniqueIdentifier>{052344FC-1A81-44C1-A599-E3E23C77E87D}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\SimpleGAS.Target.cs">
       <Filter>Source</Filter>
@@ -12,9 +12,8 @@
       <Filter>Source</Filter>
     </None>
     <None Include="..\..\.gitignore" />
-    <None Include="..\..\bfg.jar" />
     <Filter Include="Config">
-      <UniqueIdentifier>{2798A24F-959A-4202-AF4F-9AB9FB343ACD}</UniqueIdentifier>
+      <UniqueIdentifier>{B68ADB7B-5B46-447C-A678-011007A0417B}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -35,7 +34,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\SimpleGAS">
-      <UniqueIdentifier>{A79E7240-051E-47E7-8711-3529A815DE5D}</UniqueIdentifier>
+      <UniqueIdentifier>{0B1F4FA4-D29A-4727-8BBF-DE953F79237A}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\SimpleGAS\AsyncTaskAttributeChanged.cpp">
       <Filter>Source\SimpleGAS</Filter>

@@ -43,7 +43,10 @@ ASimpleGASCharacter::ASimpleGASCharacter()
 	FollowCamera->bUsePawnControlRotation = false; // Camera does not rotate relative to arm
 
 	AbilitySystem = CreateDefaultSubobject<UAbilitySystemComponent>(TEXT("AbilitySystem"));
-	//AttributeSet = CreateDefaultSubobject<UWarlockAttributeSet>(TEXT("AttributeSet"));
+	//GiveStartingEffects();
+	UE_LOG(LogTemp, Warning, TEXT("Character creation"));
+
+	AttributeSet = CreateDefaultSubobject<UWarlockAttributeSet>(TEXT("AttributeSet"));
 
 	bAlwaysRelevant = true;
 }
@@ -61,6 +64,7 @@ void ASimpleGASCharacter::SetupPlayerInputComponent(class UInputComponent* Playe
 
 void ASimpleGASCharacter::BeginPlay()
 {
+	UE_LOG(LogTemp, Warning, TEXT("Character beginplay"))
 	Super::BeginPlay();
 }
 
@@ -95,9 +99,11 @@ void ASimpleGASCharacter::GiveStartingEffects()
 
 	for (TSubclassOf<UGameplayEffect> GameplayEffect : StartupEffects)
 	{
+
 		FGameplayEffectSpecHandle NewHandle = AbilitySystem->MakeOutgoingSpec(GameplayEffect, 1, EffectContext);
 		if (NewHandle.IsValid())
 		{
+			UE_LOG(LogTemp, Warning, TEXT("adding startup effect"))
 			FActiveGameplayEffectHandle ActiveGEHandle = AbilitySystem->ApplyGameplayEffectSpecToTarget(*NewHandle.Data.Get(), AbilitySystem);
 		}
 	}
@@ -111,6 +117,8 @@ void ASimpleGASCharacter::PossessedBy(AController* NewController)
 
 void ASimpleGASCharacter::SetupAbilitySystemAndAttributes()
 {
+	UE_LOG(LogTemp, Warning, TEXT("Character attemping to to setup ability"));
+
 	AWarlockPlayerState* PS = GetPlayerState<AWarlockPlayerState>();
 	if (PS)
 	{
@@ -131,15 +139,28 @@ void ASimpleGASCharacter::SetupAbilitySystemAndAttributes()
 			GiveStartingAbilities();
 			PS->bHasDefaultAbilities = true;
 		}
+		UE_LOG(LogTemp, Warning, TEXT("Character player broadcasting abilityset"));
+
 		OnAbilitySystemComponentSet.Broadcast(AbilitySystem);
 	}
 	else //AI characters
 	{
+		if (!AbilitySystem)
+		{
+			//AddComponent()
+			AbilitySystem = NewObject<UAbilitySystemComponent>(this, UAbilitySystemComponent::StaticClass());
+			AbilitySystem->RegisterComponent();
+			AbilitySystem->SetIsReplicated(true);
+			AbilitySystem->SetReplicationMode(EGameplayEffectReplicationMode::Mixed);
+			//AbilitySystem = CreateDefaultSubobject<UAbilitySystemComponent>(TEXT("AbilitySystem"));
+		}
 		if (AbilitySystem)
 		{
 			AbilitySystem->InitAbilityActorInfo(GetController(), this);
 			GiveStartingEffects();
 			GiveStartingAbilities();
+			UE_LOG(LogTemp, Warning, TEXT("Character ai  broadcasting abilityset"));
+
 			OnAbilitySystemComponentSet.Broadcast(AbilitySystem);
 		}
 	}

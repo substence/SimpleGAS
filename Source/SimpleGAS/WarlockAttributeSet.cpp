@@ -10,4 +10,6 @@ void UWarlockAttributeSet::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>&
 
 	DOREPLIFETIME_CONDITION_NOTIFY(UWarlockAttributeSet, JumpCount, COND_None, REPNOTIFY_Always);
 	DOREPLIFETIME_CONDITION_NOTIFY(UWarlockAttributeSet, MoveSpeed, COND_None, REPNOTIFY_Always);
+	DOREPLIFETIME_CONDITION_NOTIFY(UWarlockAttributeSet, Gold, COND_None, REPNOTIFY_Always);
 }
+

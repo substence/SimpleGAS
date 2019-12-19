@@ -28,5 +28,11 @@ public:
 		void OnRep_MoveSpeed() { GAMEPLAYATTRIBUTE_REPNOTIFY(UWarlockAttributeSet, MoveSpeed); }
 	static FGameplayAttribute AttributeMoveSpeed();
 
+	UPROPERTY(BlueprintReadOnly, ReplicatedUsing = OnRep_Gold, Category = "Attributes | Gold")
+		FGameplayAttributeData Gold;
+	UFUNCTION()
+		void OnRep_Gold() { GAMEPLAYATTRIBUTE_REPNOTIFY(UWarlockAttributeSet, Gold); }
+	static FGameplayAttribute AttributeGold();
+
 	virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 };
