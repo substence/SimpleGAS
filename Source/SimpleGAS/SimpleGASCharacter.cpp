@@ -145,7 +145,7 @@ void ASimpleGASCharacter::SetupAbilitySystemAndAttributes()
 	}
 	else //AI characters
 	{
-		if (!AbilitySystem)
+		/*if (!AbilitySystem)
 		{
 			//AddComponent()
 			AbilitySystem = NewObject<UAbilitySystemComponent>(this, UAbilitySystemComponent::StaticClass());
@@ -153,7 +153,7 @@ void ASimpleGASCharacter::SetupAbilitySystemAndAttributes()
 			AbilitySystem->SetIsReplicated(true);
 			AbilitySystem->SetReplicationMode(EGameplayEffectReplicationMode::Mixed);
 			//AbilitySystem = CreateDefaultSubobject<UAbilitySystemComponent>(TEXT("AbilitySystem"));
-		}
+		}*/
 		if (AbilitySystem)
 		{
 			AbilitySystem->InitAbilityActorInfo(GetController(), this);
