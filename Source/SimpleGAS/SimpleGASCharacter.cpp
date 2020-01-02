@@ -43,6 +43,9 @@ ASimpleGASCharacter::ASimpleGASCharacter()
 	FollowCamera->bUsePawnControlRotation = false; // Camera does not rotate relative to arm
 
 	AbilitySystem = CreateDefaultSubobject<UAbilitySystemComponent>(TEXT("AbilitySystem"));
+	//AbilitySystem->SetIsReplicated(true);
+	//AbilitySystem->SetReplicationMode(EGameplayEffectReplicationMode::Mixed);
+
 	//GiveStartingEffects();
 	UE_LOG(LogTemp, Warning, TEXT("Character creation"));
 
@@ -118,7 +121,6 @@ void ASimpleGASCharacter::PossessedBy(AController* NewController)
 void ASimpleGASCharacter::SetupAbilitySystemAndAttributes()
 {
 	UE_LOG(LogTemp, Warning, TEXT("Character attemping to to setup ability"));
-
 	AWarlockPlayerState* PS = GetPlayerState<AWarlockPlayerState>();
 	if (PS)
 	{
@@ -145,7 +147,8 @@ void ASimpleGASCharacter::SetupAbilitySystemAndAttributes()
 	}
 	else //AI characters
 	{
-		/*if (!AbilitySystem)
+		UE_LOG(LogTemp, Warning, TEXT("Character ai attemping broadcasting abilityset"));
+		if (!AbilitySystem)
 		{
 			//AddComponent()
 			AbilitySystem = NewObject<UAbilitySystemComponent>(this, UAbilitySystemComponent::StaticClass());
@@ -153,13 +156,14 @@ void ASimpleGASCharacter::SetupAbilitySystemAndAttributes()
 			AbilitySystem->SetIsReplicated(true);
 			AbilitySystem->SetReplicationMode(EGameplayEffectReplicationMode::Mixed);
 			//AbilitySystem = CreateDefaultSubobject<UAbilitySystemComponent>(TEXT("AbilitySystem"));
-		}*/
-		if (AbilitySystem)
+		}
+		if (GetAbilitySystemComponent())
 		{
 			AbilitySystem->InitAbilityActorInfo(GetController(), this);
+			UE_LOG(LogTemp, Warning, TEXT("Character ai  broadcasting abilityset"));
+
 			GiveStartingEffects();
 			GiveStartingAbilities();
-			UE_LOG(LogTemp, Warning, TEXT("Character ai  broadcasting abilityset"));
 
 			OnAbilitySystemComponentSet.Broadcast(AbilitySystem);
 		}
