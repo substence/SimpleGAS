@@ -73,7 +73,7 @@ void ASimpleGASCharacter::BeginPlay()
 
 void ASimpleGASCharacter::GiveStartingAbilities()
 {
-	if (Role != ROLE_Authority || !AbilitySystem)
+	if (GetLocalRole() != ROLE_Authority || !AbilitySystem)
 	{
 		return;
 	}

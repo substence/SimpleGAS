@@ -13,3 +13,18 @@ void UWarlockAttributeSet::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>&
 	DOREPLIFETIME_CONDITION_NOTIFY(UWarlockAttributeSet, Gold, COND_None, REPNOTIFY_Always);
 }
 
+void UWarlockAttributeSet::OnRep_JumpCount()
+{
+	GAMEPLAYATTRIBUTE_REPNOTIFY(UWarlockAttributeSet, JumpCount);
+}
+
+void UWarlockAttributeSet::OnRep_MoveSpeed()
+{
+	GAMEPLAYATTRIBUTE_REPNOTIFY(UWarlockAttributeSet, MoveSpeed);
+}
+
+void UWarlockAttributeSet::OnRep_Gold()
+{
+	GAMEPLAYATTRIBUTE_REPNOTIFY(UWarlockAttributeSet, Gold);
+}
+

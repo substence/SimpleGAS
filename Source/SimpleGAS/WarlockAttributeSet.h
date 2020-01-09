@@ -7,6 +7,11 @@
 #include "AbilitySystemComponent.h"
 #include "WarlockAttributeSet.generated.h"
 
+#define ATTRIBUTE_ACCESSORS(ClassName, PropertyName) \
+	GAMEPLAYATTRIBUTE_PROPERTY_GETTER(ClassName, PropertyName) \
+	GAMEPLAYATTRIBUTE_VALUE_GETTER(PropertyName) \
+	GAMEPLAYATTRIBUTE_VALUE_SETTER(PropertyName) \
+	GAMEPLAYATTRIBUTE_VALUE_INITTER(PropertyName)
 /**
  * 
  */
@@ -18,21 +23,23 @@ class SIMPLEGAS_API UWarlockAttributeSet : public UAttributeSet
 public:
 	UPROPERTY(BlueprintReadOnly, ReplicatedUsing = OnRep_JumpCount, Category = "Attributes | Jump Count") 
 	FGameplayAttributeData JumpCount;
-	UFUNCTION() 
-	void OnRep_JumpCount() { GAMEPLAYATTRIBUTE_REPNOTIFY(UWarlockAttributeSet, JumpCount); }
-	static FGameplayAttribute AttributeJumpCount();
+	ATTRIBUTE_ACCESSORS(UWarlockAttributeSet, JumpCount)
 
 	UPROPERTY(BlueprintReadOnly, ReplicatedUsing = OnRep_MoveSpeed, Category = "Attributes | MoveSpeed")
 		FGameplayAttributeData MoveSpeed;
-	UFUNCTION()
-		void OnRep_MoveSpeed() { GAMEPLAYATTRIBUTE_REPNOTIFY(UWarlockAttributeSet, MoveSpeed); }
-	static FGameplayAttribute AttributeMoveSpeed();
+	ATTRIBUTE_ACCESSORS(UWarlockAttributeSet, MoveSpeed)
 
 	UPROPERTY(BlueprintReadOnly, ReplicatedUsing = OnRep_Gold, Category = "Attributes | Gold")
 		FGameplayAttributeData Gold;
+	ATTRIBUTE_ACCESSORS(UWarlockAttributeSet, Gold)
+
+protected:
 	UFUNCTION()
-		void OnRep_Gold() { GAMEPLAYATTRIBUTE_REPNOTIFY(UWarlockAttributeSet, Gold); }
-	static FGameplayAttribute AttributeGold();
+		virtual void OnRep_JumpCount();
+	UFUNCTION()
+		virtual void OnRep_MoveSpeed();
+	UFUNCTION()
+		virtual void OnRep_Gold();
 
 	virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 };
